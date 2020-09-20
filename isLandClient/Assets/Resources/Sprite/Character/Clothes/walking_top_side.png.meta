@@ -1,43 +1,25 @@
 fileFormatVersion: 2
-guid: c1cdc38c0c537f04f9a25e683949cba1
+guid: 0a5aa2eb83338fa4a9648904338a4b88
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 799740921929987228
-    second: walking_side_0
+      213: -375493104818368402
+    second: walking_top_side_0
   - first:
-      213: 4002772984560787256
-    second: walking_side_1
+      213: 6654024590225372801
+    second: walking_top_side_1
   - first:
-      213: -3721823175984551659
-    second: walking_side_2
+      213: 7829824730340523711
+    second: walking_top_side_2
   - first:
-      213: -8897411302215783495
-    second: walking_side_3
+      213: 2444568539859433104
+    second: walking_top_side_3
   - first:
-      213: 5953425114727286847
-    second: walking_side_4
+      213: -7845885671080188964
+    second: walking_top_side_4
   - first:
-      213: -1076142912678428866
-    second: walking_side_5
-  - first:
-      213: -1853665130726188664
-    second: walking_side_0
-  - first:
-      213: 3644959426629382242
-    second: walking_side_1
-  - first:
-      213: 28777798998202739
-    second: walking_side_2
-  - first:
-      213: -8746274448115638584
-    second: walking_side_3
-  - first:
-      213: 7442945084373115160
-    second: walking_side_4
-  - first:
-      213: 2261156309901036706
-    second: walking_side_5
+      213: -5704715839252708730
+    second: walking_top_side_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,127 +119,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking_side_0
+      name: walking_top_side_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 46
-        height: 69
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        x: 2
+        y: 0
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 889998e72657646e0800000000000000
-      internalID: -1853665130726188664
+      spriteID: e6051b7b20bf9caf0800000000000000
+      internalID: -375493104818368402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_1
+      name: walking_top_side_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186f81b3c18d75c50800000000000000
+      internalID: 6654024590225372801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_top_side_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbef389ab1029ac60800000000000000
+      internalID: 7829824730340523711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_top_side_3
       rect:
         serializedVersion: 2
         x: 47
         y: 0
-        width: 46
-        height: 70
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 260b4f4694f759230800000000000000
-      internalID: 3644959426629382242
+      spriteID: 096ba67922adce120800000000000000
+      internalID: 2444568539859433104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_2
+      name: walking_top_side_4
       rect:
         serializedVersion: 2
-        x: 94
+        x: 60
         y: 0
-        width: 46
-        height: 68
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37994b6714d366000800000000000000
-      internalID: 28777798998202739
+      spriteID: cd320fa2d80dd1390800000000000000
+      internalID: -7845885671080188964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_3
+      name: walking_top_side_5
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1
-        width: 46
-        height: 69
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ceddfbaabdfe9680800000000000000
-      internalID: -8746274448115638584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walking_side_4
-      rect:
-        serializedVersion: 2
-        x: 188
+        x: 75
         y: 0
-        width: 46
-        height: 70
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 811acccae17aa4760800000000000000
-      internalID: 7442945084373115160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walking_side_5
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 0
-        width: 46
-        height: 68
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2acc8490fad316f10800000000000000
-      internalID: 2261156309901036706
+      spriteID: 6824cc84b27c4d0b0800000000000000
+      internalID: -5704715839252708730
       vertices: []
       indices: 
       edges: []

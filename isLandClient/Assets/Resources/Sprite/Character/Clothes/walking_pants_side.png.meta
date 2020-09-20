@@ -1,43 +1,25 @@
 fileFormatVersion: 2
-guid: c1cdc38c0c537f04f9a25e683949cba1
+guid: b839e4d3b5fe1fe4da8c06562cab852e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 799740921929987228
-    second: walking_side_0
+      213: 3289032905395974862
+    second: walking_pants_side_0
   - first:
-      213: 4002772984560787256
-    second: walking_side_1
+      213: 3302523937423944176
+    second: walking_pants_side_1
   - first:
-      213: -3721823175984551659
-    second: walking_side_2
+      213: -2138973017051403430
+    second: walking_pants_side_2
   - first:
-      213: -8897411302215783495
-    second: walking_side_3
+      213: 8154472120259947400
+    second: walking_pants_side_3
   - first:
-      213: 5953425114727286847
-    second: walking_side_4
+      213: 5213542456756284681
+    second: walking_pants_side_4
   - first:
-      213: -1076142912678428866
-    second: walking_side_5
-  - first:
-      213: -1853665130726188664
-    second: walking_side_0
-  - first:
-      213: 3644959426629382242
-    second: walking_side_1
-  - first:
-      213: 28777798998202739
-    second: walking_side_2
-  - first:
-      213: -8746274448115638584
-    second: walking_side_3
-  - first:
-      213: 7442945084373115160
-    second: walking_side_4
-  - first:
-      213: 2261156309901036706
-    second: walking_side_5
+      213: 7373798763536153763
+    second: walking_pants_side_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,127 +119,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking_side_0
+      name: walking_pants_side_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 46
-        height: 69
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        x: 4
+        y: 2
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 889998e72657646e0800000000000000
-      internalID: -1853665130726188664
+      spriteID: ec2b2bc500ef4ad20800000000000000
+      internalID: 3289032905395974862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_1
+      name: walking_pants_side_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 20
         y: 0
-        width: 46
-        height: 70
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 260b4f4694f759230800000000000000
-      internalID: 3644959426629382242
+      spriteID: 0f9e068060ce4dd20800000000000000
+      internalID: 3302523937423944176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_2
+      name: walking_pants_side_2
       rect:
         serializedVersion: 2
-        x: 94
+        x: 40
         y: 0
-        width: 46
-        height: 68
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37994b6714d366000800000000000000
-      internalID: 28777798998202739
+      spriteID: a5b618eaf57d052e0800000000000000
+      internalID: -2138973017051403430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_3
+      name: walking_pants_side_3
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1
-        width: 46
-        height: 69
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        x: 64
+        y: 2
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceddfbaabdfe9680800000000000000
-      internalID: -8746274448115638584
+      spriteID: 88babea60318a2170800000000000000
+      internalID: 8154472120259947400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_4
+      name: walking_pants_side_4
       rect:
         serializedVersion: 2
-        x: 188
+        x: 80
         y: 0
-        width: 46
-        height: 70
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 811acccae17aa4760800000000000000
-      internalID: 7442945084373115160
+      spriteID: 90d206ced393a5840800000000000000
+      internalID: 5213542456756284681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_5
+      name: walking_pants_side_5
       rect:
         serializedVersion: 2
-        x: 235
+        x: 100
         y: 0
-        width: 46
-        height: 68
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2acc8490fad316f10800000000000000
-      internalID: 2261156309901036706
+      spriteID: 3ac79c948eef45660800000000000000
+      internalID: 7373798763536153763
       vertices: []
       indices: 
       edges: []

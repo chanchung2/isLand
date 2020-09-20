@@ -1,43 +1,25 @@
 fileFormatVersion: 2
-guid: c1cdc38c0c537f04f9a25e683949cba1
+guid: 053b4df3d93d4bb489db7f1bb5fddd3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 799740921929987228
-    second: walking_side_0
+      213: 6403413170100162948
+    second: walking_pants_0
   - first:
-      213: 4002772984560787256
-    second: walking_side_1
+      213: -7147007164154114444
+    second: walking_pants_1
   - first:
-      213: -3721823175984551659
-    second: walking_side_2
+      213: -7727111412015914484
+    second: walking_pants_2
   - first:
-      213: -8897411302215783495
-    second: walking_side_3
+      213: 3232614014002749211
+    second: walking_pants_3
   - first:
-      213: 5953425114727286847
-    second: walking_side_4
+      213: -8207945246079651629
+    second: walking_pants_4
   - first:
-      213: -1076142912678428866
-    second: walking_side_5
-  - first:
-      213: -1853665130726188664
-    second: walking_side_0
-  - first:
-      213: 3644959426629382242
-    second: walking_side_1
-  - first:
-      213: 28777798998202739
-    second: walking_side_2
-  - first:
-      213: -8746274448115638584
-    second: walking_side_3
-  - first:
-      213: 7442945084373115160
-    second: walking_side_4
-  - first:
-      213: 2261156309901036706
-    second: walking_side_5
+      213: -8232905356613041223
+    second: walking_pants_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,127 +119,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking_side_0
+      name: walking_pants_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 46
-        height: 69
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 889998e72657646e0800000000000000
-      internalID: -1853665130726188664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walking_side_1
-      rect:
-        serializedVersion: 2
-        x: 47
         y: 0
-        width: 46
-        height: 70
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 260b4f4694f759230800000000000000
-      internalID: 3644959426629382242
+      spriteID: 481d0e9f95e7dd850800000000000000
+      internalID: 6403413170100162948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_2
+      name: walking_pants_1
       rect:
         serializedVersion: 2
-        x: 94
+        x: 21
         y: 0
-        width: 46
-        height: 68
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37994b6714d366000800000000000000
-      internalID: 28777798998202739
+      spriteID: 47e0c65c9dab0dc90800000000000000
+      internalID: -7147007164154114444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_3
+      name: walking_pants_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1
-        width: 46
-        height: 69
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        x: 42
+        y: 3
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceddfbaabdfe9680800000000000000
-      internalID: -8746274448115638584
+      spriteID: c02acea5c19c3c490800000000000000
+      internalID: -7727111412015914484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_4
+      name: walking_pants_3
       rect:
         serializedVersion: 2
-        x: 188
+        x: 63
         y: 0
-        width: 46
-        height: 70
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 811acccae17aa4760800000000000000
-      internalID: 7442945084373115160
+      spriteID: b1f5590915d8cdc20800000000000000
+      internalID: 3232614014002749211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_side_5
+      name: walking_pants_4
       rect:
         serializedVersion: 2
-        x: 235
+        x: 84
         y: 0
-        width: 46
-        height: 68
-      alignment: 9
-      pivot: {x: 0.445, y: 0.5}
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2acc8490fad316f10800000000000000
-      internalID: 2261156309901036706
+      spriteID: 3d0f0974945871e80800000000000000
+      internalID: -8207945246079651629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_pants_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 3
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b34bada238debd80800000000000000
+      internalID: -8232905356613041223
       vertices: []
       indices: 
       edges: []
