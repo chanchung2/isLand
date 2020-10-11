@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Initialization : MonoBehaviour
 {  
+    void Awake()
+    {
+        DataManager.Instance.Initialization();
+    }
+
     void Start()
     {
         ObjectManager.Instance.CreateObject<Player>(Constants.kPREFAB_PLAYER);

@@ -10,10 +10,15 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
         {
             if (m_Instance == null)
             {
-                GameObject obj = new GameObject(typeof(T).ToString());
-                obj.AddComponent<T>();
-
-                DontDestroyOnLoad(obj);
+                GameObject obj = GameObject.Find(typeof(T).ToString());
+                
+                // 씬에 존재하지 않는 오브젝트인 경우.
+                if (obj == null)
+                {
+                    obj = new GameObject(typeof(T).ToString());
+                    obj.AddComponent<T>();
+                    DontDestroyOnLoad(obj);
+                }
 
                 m_Instance = obj.GetComponent<T>();   
             }

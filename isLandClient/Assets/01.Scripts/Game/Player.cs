@@ -23,9 +23,14 @@ public class Player : MonoBehaviour
         Idle,
         Walk,
     }
+    
+    [SerializeField]
+    private Rigidbody2D m_Rigidbody;
 
     [SerializeField]
     private Animator m_Animator;
+
+    private StatData m_StatData;
 
     private kCHARACTER_STATE m_CurrentState;
     private kMOVE_DIRECTION m_CurrentDirection;
@@ -70,37 +75,36 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        m_BaseCharacterScale = this.transform.localScale;
-
+        m_StatData = DataManager.Instance.GetStatData();
         m_SpriteAtlasCharacter = Resources.Load<SpriteAtlas>("Atlas/Character");
+
+        m_BaseCharacterScale = this.transform.localScale;
     }
 
     void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.UpArrow))
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            Move(kMOVE_DIRECTION.Up);
+            Action();
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+
+        if (h == 0 && v == 0)
         {
-            Move(kMOVE_DIRECTION.Left);
-        }
-        else if(Input.GetKey(KeyCode.RightArrow))
-        {
-            Move(kMOVE_DIRECTION.Right);
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            Move(kMOVE_DIRECTION.Down);
+            StopMove();
         }
         else
         {
-            StopMove();
+            Move(new Vector2(h, v));
         }
 #endif
     }
 
+#region Update
+    // 캐릭터 Sprite 갱신.
     private void UpdateSprite(int index)
     {
         string directionName = GetDirectionSpriteName();
@@ -112,15 +116,9 @@ public class Player : MonoBehaviour
         m_SpriteHair.sprite = m_SpriteAtlasCharacter.GetSprite(string.Format("{0}{1}_{2}", kSPRITE_NAME_HAIR, directionName, index));
     }
 
-    private void Move(kMOVE_DIRECTION direciton)    
+    // 캐릭터가 보고 있는 방향 갱신. (좌, 우)
+    private void UpdateDirection()
     {
-        ResetAnimatorParameter();
-        
-        m_CurrentDirection = direciton;
-
-        m_CurrentState = kCHARACTER_STATE.Walk;
-        m_Animator.SetBool(kPARAMETER_NAME_WALK, true);
-        
         switch (m_CurrentDirection)
         {
             case kMOVE_DIRECTION.Right :
@@ -131,9 +129,22 @@ public class Player : MonoBehaviour
             default :
                 this.transform.localScale = m_BaseCharacterScale;
                 break;
-        }
+        }        
+    }
+#endregion
 
-        // 이동 로직 추가.
+#region Move
+    private void Move(Vector2 movePos)    
+    {
+        ResetAnimatorParameter();
+        
+        m_CurrentDirection = GetMoveDirection(movePos);
+        UpdateDirection();
+
+        m_CurrentState = kCHARACTER_STATE.Walk;
+        m_Animator.SetBool(kPARAMETER_NAME_WALK, true);
+
+        m_Rigidbody.MovePosition((Vector2)this.transform.position + movePos.normalized * m_StatData.SPEED * Time.deltaTime);
     }
 
     private void StopMove()
@@ -141,11 +152,15 @@ public class Player : MonoBehaviour
         ResetAnimatorParameter();
 
         m_CurrentState = kCHARACTER_STATE.Idle;
+    }
+#endregion
 
-        // todo :: Idle 애니메이션이 추가되면 수정.
-        //m_Animator.SetBool(kPARAMETER_NAME_IDLE, true);
+    private void Action()
+    {
+        TileMapManager.Instance.SetSoilTile(this.transform.position);
     }
 
+    // 애니메이터 파라미터 초기화.
     private void ResetAnimatorParameter()
     {
         string[] arrayParameterName = {kPARAMETER_NAME_WALK};
@@ -157,6 +172,8 @@ public class Player : MonoBehaviour
         }          
     }
 
+#region GetData
+    // 현재 방향에 맞는 Sprite 이름 반환.
     private string GetDirectionSpriteName()
     {
         switch (m_CurrentDirection)
@@ -169,4 +186,39 @@ public class Player : MonoBehaviour
                 return kSPRITE_NAME_DIRECTION_SIDE;
         }
     }
+
+    // 움직이는 방향에 맞는 Direction 값 반환.
+    private kMOVE_DIRECTION GetMoveDirection(Vector2 movePos)
+    {
+        // Up
+        if (movePos == new Vector2(0,1))
+            return kMOVE_DIRECTION.Up;
+        // Down
+        else if (movePos == new Vector2(0, -1))
+            return kMOVE_DIRECTION.Down;
+        // Right
+        else if (movePos == new Vector2(1, 0))
+            return kMOVE_DIRECTION.Right;
+        // Left
+        else if (movePos == new Vector2(-1, 0))
+            return kMOVE_DIRECTION.Left;
+        // LeftUp
+        else if (movePos == new Vector2(-1, 1))
+            return kMOVE_DIRECTION.LeftUp;
+        // LeftDown
+        else if (movePos == new Vector2(-1, -1))
+            return kMOVE_DIRECTION.LeftDown;
+        // RightUp
+        else if (movePos == new Vector2(1, 1))
+            return kMOVE_DIRECTION.RightUp;
+        // RightDown
+        else if (movePos == new Vector2(1, -1))
+            return kMOVE_DIRECTION.RightDown;
+        else
+        {
+            Debug.Log("Player::GetMoveDirection Error");
+            return kMOVE_DIRECTION.Down;
+        }
+    }
+#endregion
 }

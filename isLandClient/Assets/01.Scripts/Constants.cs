@@ -4,6 +4,11 @@ using UnityEngine;
 
 public static class Constants
 {
+    public enum kTAG
+    {
+        SoilTile,
+    }
+
     #region Prefab Path.
     
     public static readonly string kPREFAB_PLAYER = "Prefabs/Player";
