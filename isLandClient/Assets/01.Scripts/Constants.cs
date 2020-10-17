@@ -13,13 +13,14 @@ public enum kATLAS
     Character = 0,
     Tile,
     UI,
+    CropObject,
 }
 
 public static class Constants
 {
     public static readonly Vector3 kTILE_PIVOT_POS = new Vector3(0.5f, 0.5f, 0.5f);
 
-    public static readonly string[] kATALS_PATHS = {"Atlas/Character", "Atlas/Tile", "Atlas/UI"};
+    public static readonly string[] kATALS_PATHS = {"Atlas/Character", "Atlas/Tile", "Atlas/UI", "Atlas/CropObject"};
 
     #region Prefab Path.
     

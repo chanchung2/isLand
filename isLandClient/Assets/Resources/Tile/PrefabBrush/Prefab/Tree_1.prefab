@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4542965466204147206}
+  - component: {fileID: 1324059241112337419}
   - component: {fileID: 8463169590634054371}
   m_Layer: 0
   m_Name: Tree_1
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1324059241112337419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2308197966394722053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722b15ee563fb5642b1e428fab0f255c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoxColldier: {fileID: 8463169590634054371}
+  m_SpriteCrop: {fileID: 8177831042288954618}
 --- !u!61 &8463169590634054371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,12 +144,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 53da1011c3977314ebe697a5b4a829b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46673ac60a7fcb84b9bf54c98a659316, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 5}
+  m_Size: {x: 1.5, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
