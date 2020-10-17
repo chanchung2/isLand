@@ -7,6 +7,6 @@ public class UIMain : MonoBehaviour
 
     public void OnTouchMenu()
     {
-        Debug.Log("OnTouchMenu");
+        ObjectManager.Instance.CreateObject<UIMenu>(Constants.kPREFAB_UI_MENU);
     }
 }

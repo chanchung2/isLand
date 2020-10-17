@@ -20,33 +20,67 @@ SpriteAtlas:
       readable: 0
       crunchedCompression: 0
       sRGB: 1
-    platformSettings: []
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 13
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
-      padding: 4
+      padding: 8
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 859113a75b8e75740bae752d9c0a0a7c, type: 3}
-    totalSpriteSurfaceArea: 46326
+    totalSpriteSurfaceArea: 63458
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 09de5350656136b40948f39674e681fc, type: 3}
+  - {fileID: 21300000, guid: 455a26f0cb44bb64f92a8b2d54ac3d42, type: 3}
+  - {fileID: 21300000, guid: b7aff9e245ec98d4eb3e094e0a83a2f0, type: 3}
+  - {fileID: 21300000, guid: 647692b3b9d9aaa47bfc93f67bc18eb8, type: 3}
+  - {fileID: 21300000, guid: b292bc14b8d252b4282a40b172bb3f15, type: 3}
+  - {fileID: 21300000, guid: 4b792106ad8858b4cbc45cc9959dae28, type: 3}
   - {fileID: 21300000, guid: 649943e69a1234746b91e6514279887e, type: 3}
+  - {fileID: 21300000, guid: b972def7bffdd054095d97872c6fe6e1, type: 3}
   - {fileID: 21300000, guid: 5d06b949b9274a04f82a50872e6927af, type: 3}
+  - {fileID: 21300000, guid: 0c44b84a4fa86714cb2e71a097b73c5f, type: 3}
   - {fileID: 21300000, guid: 390f374bb5c723347b02dc7501d4f4fe, type: 3}
+  - {fileID: 21300000, guid: 6bbba84d4e2856045b32e7191f711894, type: 3}
   - {fileID: 21300000, guid: 7c6793de031f7b545a69ceee6c456bfc, type: 3}
+  - {fileID: 21300000, guid: 165eb9de93817bc428751ef1c7d59b8f, type: 3}
+  - {fileID: 21300000, guid: bd1b484fdd30a5847bef8178be3df90e, type: 3}
   - {fileID: 21300000, guid: 5086447fc9a27454b8ba59ba21d7f70b, type: 3}
   m_PackedSpriteNamesToIndex:
+  - joystick_left
+  - pickax_off
+  - inventory group_create
+  - heart off
+  - inventory group_set
+  - heart on
   - menu
+  - inventory group_map
   - inventory group_bag
+  - joystick_right_yellow
   - inventory_space
+  - joystick_right_Blue
   - InventoryBG
+  - inventory group_heart
+  - pickax_on
   - inventory group
   m_Tag: UI
   m_IsVariant: 0

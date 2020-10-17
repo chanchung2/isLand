@@ -7,6 +7,8 @@ public class TileMapManager : Singleton<TileMapManager>
 {
     [SerializeField]
     private Tilemap m_SoilTileMap;
+    [SerializeField]
+    private Tilemap m_ObjectTileMap;
 
     // 흙 타일 지정.
 
