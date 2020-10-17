@@ -11,6 +11,7 @@ public class Initialization : MonoBehaviour
 
     void Start()
     {
+        ObjectManager.Instance.CreateObject<UIMain>(Constants.kPREFAB_UI_MAIN);
         ObjectManager.Instance.CreateObject<Player>(Constants.kPREFAB_PLAYER);
     }
 }
