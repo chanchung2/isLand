@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &370453039
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Rigidbody: {fileID: 4211155766043089407}
   m_Animator: {fileID: 7841636895924810286}
+  m_SpriteActiveTile: {fileID: 0}
   m_SpriteCharacter: {fileID: 109975488}
   m_SpriteTop: {fileID: 1235096551}
   m_SpritePants: {fileID: 1834743968}

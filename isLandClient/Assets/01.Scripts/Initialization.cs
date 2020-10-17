@@ -7,6 +7,7 @@ public class Initialization : MonoBehaviour
     void Awake()
     {
         DataManager.Instance.Initialization();
+        AtlasManager.Instance.Initialization();
 
         PoolObjectInitialization();
     }
