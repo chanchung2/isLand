@@ -37,7 +37,8 @@ public class Player : MonoBehaviour
 
     private Vector3 m_BaseCharacterScale;
 
-    private SpriteAtlas m_SpriteAtlasCharacter;
+    public delegate void OnActiveButtonPressHandler(bool isPress, Vector3 activeTileStartPos);
+    public event OnActiveButtonPressHandler OnActiveButtonPress;
 
     [Header("SpriteSlot")]
     [SerializeField]
@@ -76,9 +77,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         m_StatData = DataManager.Instance.GetStatData();
-        m_SpriteAtlasCharacter = Resources.Load<SpriteAtlas>("Atlas/Character");
 
         m_BaseCharacterScale = this.transform.localScale;
+        
+        ObjectManager.Instance.CreateObject<ActiveTile>(Constants.kPREFAB_ATIVE_TILE);
     }
 
     void Update()
@@ -87,9 +89,13 @@ public class Player : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            Action();
+            PressActionButton(true);
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            PressActionButton(false);
         }
 
         if (h == 0 && v == 0)
@@ -109,11 +115,11 @@ public class Player : MonoBehaviour
     {
         string directionName = GetDirectionSpriteName();
 
-        m_SpriteCharacter.sprite = m_SpriteAtlasCharacter.GetSprite(string.Format("{0}{1}_{2}", kSPRITE_NAME_CHARATER, directionName, index));
-        m_SpriteTop.sprite = m_SpriteAtlasCharacter.GetSprite(string.Format("{0}{1}_{2}", kSPRITE_NAME_TOP, directionName, index));
-        m_SpritePants.sprite = m_SpriteAtlasCharacter.GetSprite(string.Format("{0}{1}_{2}", kSPRITE_NAME_PANTS, directionName, index));
-        m_SpriteEyes.sprite = m_SpriteAtlasCharacter.GetSprite(string.Format("{0}{1}_{2}", kSPRITE_NAME_EYES, directionName, index));
-        m_SpriteHair.sprite = m_SpriteAtlasCharacter.GetSprite(string.Format("{0}{1}_{2}", kSPRITE_NAME_HAIR, directionName, index));
+        m_SpriteCharacter.sprite = AtlasManager.Instance.GetSprite(kATLAS.Character, string.Format("{0}{1}_{2}", kSPRITE_NAME_CHARATER, directionName, index));
+        m_SpriteTop.sprite = AtlasManager.Instance.GetSprite(kATLAS.Character, string.Format("{0}{1}_{2}", kSPRITE_NAME_TOP, directionName, index));
+        m_SpritePants.sprite = AtlasManager.Instance.GetSprite(kATLAS.Character, string.Format("{0}{1}_{2}", kSPRITE_NAME_PANTS, directionName, index));
+        m_SpriteEyes.sprite = AtlasManager.Instance.GetSprite(kATLAS.Character, string.Format("{0}{1}_{2}", kSPRITE_NAME_EYES, directionName, index));
+        m_SpriteHair.sprite = AtlasManager.Instance.GetSprite(kATLAS.Character, string.Format("{0}{1}_{2}", kSPRITE_NAME_HAIR, directionName, index));
     }
 
     // 캐릭터가 보고 있는 방향 갱신. (좌, 우)
@@ -154,10 +160,10 @@ public class Player : MonoBehaviour
         m_CurrentState = kCHARACTER_STATE.Idle;
     }
 #endregion
-
-    private void Action()
+    public void PressActionButton(bool isPress)
     {
-        TileMapManager.Instance.SetSoilTile(this.transform.position);
+        var tilePos = TileMapManager.Instance.GetWorldToCell(this.transform.position);
+        OnActiveButtonPress(isPress, tilePos + Constants.kTILE_PIVOT_POS + GetMovePos());
     }
 
     // 애니메이터 파라미터 초기화.
@@ -220,5 +226,27 @@ public class Player : MonoBehaviour
             return kMOVE_DIRECTION.Down;
         }
     }
+
+    // 현재 Direction에 맞는 움직이는 방향 반환. 
+    private Vector3 GetMovePos()
+    {
+        switch (m_CurrentDirection)
+        {
+            case kMOVE_DIRECTION.Up :
+                return new Vector3(0, 1, 0);
+            case kMOVE_DIRECTION.Down :
+                return new Vector3(0, -1, 0);
+            case kMOVE_DIRECTION.Left :
+            case kMOVE_DIRECTION.LeftUp :
+            case kMOVE_DIRECTION.LeftDown :
+                return new Vector3(-1, 0, 0);
+            case kMOVE_DIRECTION.Right :
+            case kMOVE_DIRECTION.RightUp :
+            case kMOVE_DIRECTION.RightDown :
+                return new Vector3(1, 0, 0);
+            default :
+                return Vector3.zero;
+        }
+    }    
 #endregion
 }
