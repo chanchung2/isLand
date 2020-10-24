@@ -1,0 +1,2 @@
+D:\My\isLand\isLandClient\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\My\isLand\isLandClient\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

@@ -1,0 +1,2 @@
+D:\My\isLand\isLandClient\obj\Debug\Unity.2D.Tilemap.Extras.Editor.csprojAssemblyReference.cache
+D:\My\isLand\isLandClient\obj\Debug\Unity.2D.Tilemap.Extras.Editor.csproj.CoreCompileInputs.cache
