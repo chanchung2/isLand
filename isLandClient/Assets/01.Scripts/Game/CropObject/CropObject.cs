@@ -11,14 +11,19 @@ public abstract class CropObject : MonoBehaviour
     protected SpriteRenderer m_SpriteCrop;
 
     [SerializeField]
-    protected CropItemData m_CropItemData;
-    [SerializeField]
-    protected UserCropItemData m_UserCropItemData;    
+    protected UserCropObjectData m_UserCropItemData;   
+    public UserCropObjectData UserCropItemData { get { return m_UserCropItemData ; } } 
 
     private float m_Time = 0;                           // 육성 시간.
-    
+
     void Update()
     {
+#if UNITY_EDITOR
+        if (!Application.isPlaying)
+        {
+            m_UserCropItemData.POS = this.transform.position;
+        }
+#endif
         // if (m_CurrentLevel >= m_MaxLevel)
         //     return ;
 

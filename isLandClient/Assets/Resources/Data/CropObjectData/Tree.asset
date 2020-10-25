@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bc72d706e8e68418c3f87b4d640083, type: 3}
   m_Name: Tree
   m_EditorClassIdentifier: 
-  CROP_ITEM_NAME: Tree
+  CROP_OBJECT_NAME: Tree
   ITEM_CODE: 10000
   MAX_LEVEL: 3
   LEVEL_UP_DELAY: 050000000a000000

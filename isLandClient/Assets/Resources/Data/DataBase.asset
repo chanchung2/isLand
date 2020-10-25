@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebcb92f881e7d0c419b184278e1a86ea, type: 3}
-  m_Name: DataTable
+  m_Name: DataBase
   m_EditorClassIdentifier: 
-  CROP_ITEM_DATA:
+  CROP_OBJECT_DATA:
   - {fileID: 11400000, guid: a4af45c4bc6ba224e9276322c98724ef, type: 2}

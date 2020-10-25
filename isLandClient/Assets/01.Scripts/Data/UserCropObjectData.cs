@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class UserCropItemData
+public class UserCropObjectData
 {   
+    public Vector3 POS;
     public int CURRENT_LEVEL = 1;
     public int PROMOTE_TIME;
 
-    public CropItemData CROP_ITEM_DATA;
+    public int ITEM_CODE = 0;
 }

@@ -18,6 +18,7 @@ public class TileMapManager : Singleton<TileMapManager>
 
         Vector3Int tilePos = m_SoilTileMap.WorldToCell(pos);
         m_SoilTileMap.SetTile(tilePos, terrainTile);
+
     }
 
     public Vector3Int GetWorldToCell(Vector3 playerPos)

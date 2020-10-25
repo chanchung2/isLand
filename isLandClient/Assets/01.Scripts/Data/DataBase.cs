@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DataTable", menuName = "DataTable/DataTable", order = 1)]
-public class DataTable : ScriptableObject
+public class DataBase : ScriptableObject
 {
-    public List<CropItemData> CROP_ITEM_DATA;
+    public List<CropObjectData> CROP_OBJECT_DATA;
 }
