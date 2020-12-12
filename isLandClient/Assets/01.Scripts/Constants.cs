@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum kTAG
 {
+    Player,
     SoilTile,
     ColliderObject,
 }
@@ -24,6 +25,8 @@ public static class Constants
 
     #region Prefab Path.
     
+    public static readonly string kPREFAB_DROP_ITEM = "Prefabs/Common/DropItem";
+
     public static readonly string kPREFAB_PLAYER = "Prefabs/Player";
     public static readonly string kPREFAB_ATIVE_TILE = "Prefabs/ActiveTile";
 

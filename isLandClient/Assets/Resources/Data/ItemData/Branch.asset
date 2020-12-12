@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebcb92f881e7d0c419b184278e1a86ea, type: 3}
-  m_Name: DataBase
+  m_Script: {fileID: 11500000, guid: 6a0c050647861a24a8d9df0bf3874b98, type: 3}
+  m_Name: Branch
   m_EditorClassIdentifier: 
-  CROP_OBJECT_DATA:
-  - {fileID: 11400000, guid: a4af45c4bc6ba224e9276322c98724ef, type: 2}
-  ITEM_DATA:
-  - {fileID: 11400000, guid: 0395584ebc3a10c48b985b9b43469bc6, type: 2}
+  ITEM_CODE: 10000
+  ITEM_NAME: Branch

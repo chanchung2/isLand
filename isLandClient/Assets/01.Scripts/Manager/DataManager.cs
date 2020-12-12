@@ -24,11 +24,14 @@ public class DataManager : Singleton<DataManager>
         return m_DataBase.CROP_OBJECT_DATA.Find(findData => findData.ITEM_CODE == itemCode).CROP_OBJECT_NAME;
     }
 
+    public ItemData GetItemData(int itemCode)
+    {
+        return m_DataBase.ITEM_DATA.Find(findData => findData.ITEM_CODE == itemCode);
+    }
+
     public void SaveData<T>(T data)
     {
         string json = JsonUtility.ToJson(data);
-
-        Debug.Log("SaveData : " + json.ToString());
 
         PlayerPrefs.SetString(typeof(T).Name, json);
     }
@@ -42,8 +45,6 @@ public class DataManager : Singleton<DataManager>
             json = JsonUtility.ToJson(defaultValue);
             defaultValue = null;
         }
-
-        Debug.Log("LoadData : " + json);
 
         return JsonUtility.FromJson<T>(json);
     }

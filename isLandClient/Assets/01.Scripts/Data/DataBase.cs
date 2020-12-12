@@ -6,4 +6,5 @@ using UnityEngine;
 public class DataBase : ScriptableObject
 {
     public List<CropObjectData> CROP_OBJECT_DATA;
+    public List<ItemData> ITEM_DATA;
 }

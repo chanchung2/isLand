@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 2221269986814008591}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,7 +494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Rigidbody: {fileID: 4211155766043089407}
   m_Animator: {fileID: 7841636895924810286}
-  m_SpriteActiveTile: {fileID: 0}
   m_SpriteCharacter: {fileID: 109975488}
   m_SpriteTop: {fileID: 1235096551}
   m_SpritePants: {fileID: 1834743968}
